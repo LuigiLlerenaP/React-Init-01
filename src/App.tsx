@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Footer from "./components/footer";
+import HeaderNav from "./components/header";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const fullName: string = "Luigi";
+  const message: string = "Welcome to my website";
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <HeaderNav />
+      <section className="min-h-screen bg-gradient-to-br from-slate-900 to-emerald-800 flex items-center justify-center text-white">
+        <div className="text-center px-6 py-12 rounded-2xl shadow-2xl bg-slate-800 bg-opacity-80 max-w-2xl w-full animate-fade-in">
+          <h1 className="text-4xl font-bold mb-4">Hello, {fullName}!</h1>
+          <p className="text-xl font-light">{message}</p>
+          <p className="mt-6 text-sm text-slate-300">
+            This is the start of something great. Explore and enjoy!
+          </p>
+        </div>
+      </section>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
