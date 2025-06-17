@@ -2,7 +2,7 @@ import Footer from "./components/footer";
 import HeaderNav from "./components/header";
 
 function App() {
-  const fullName: string = "Luigi";
+  const fullName: string = "Luigi Porras";
   const message: string = "Welcome to my website";
   return (
     <>
